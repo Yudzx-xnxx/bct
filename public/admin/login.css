@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui;
+  background: radial-gradient(circle at top, #232946 0%, #0e1121 70%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: rgba(255,255,255,0.06);
+  padding: 30px;
+  border-radius: 20px;
+  width: 350px;
+  max-width: 90%;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg,#3d4bff,#8c5eff,#00b3ff,#0099ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.input-group {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-top: 6px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.login-btn {
+  margin-top: 22px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#3d4bff,#8c5eff,#00b3ff,#0099ff);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+}
+
+.status {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ff7777;
+}
+
+
+/* ================================================
+   RESPONSIVE MOBILE (HP 360px – 480px)
+================================================== */
+@media (max-width: 480px) {
+
+  body {
+    padding: 20px;
+    height: auto;
+  }
+
+  .login-container {
+    width: 100%;
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .input-group input {
+    padding: 11px;
+    font-size: 14px;
+  }
+
+  .login-btn {
+    padding: 11px;
+    font-size: 15px;
+  }
+}
+
+/* ================================================
+   RESPONSIVE EXTRA SMALL (HP MINI 320px)
+================================================== */
+@media (max-width: 360px) {
+
+  .login-container {
+    width: 100%;
+    padding: 18px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .input-group label {
+    font-size: 12px;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .login-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

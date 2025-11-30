@@ -1,0 +1,30 @@
+{
+  "products": [
+    { "id": 1, "name": "PANEL RAM 1GB", "price": 1000, "desc": "Cocok untuk pemula, performa ringan dan stabil.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 2, "name": "PANEL RAM 2GB", "price": 2000, "desc": "Performa lebih kuat untuk bot skala kecil.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 3, "name": "PANEL RAM 3GB", "price": 3000, "desc": "Ideal untuk project menengah.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 4, "name": "PANEL RAM 4GB", "price": 4000, "desc": "Sangat stabil untuk bot aktif.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 5, "name": "PANEL RAM 5GB", "price": 5000, "desc": "Kapasitas besar untuk performa tinggi.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 6, "name": "PANEL RAM 6GB", "price": 6000, "desc": "Performa optimal untuk bot ramai.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 7, "name": "PANEL RAM 7GB", "price": 7000, "desc": "Stabilitas maksimal.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 8, "name": "PANEL RAM 8GB", "price": 8000, "desc": "Performa ekstrem untuk multitasking.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 9, "name": "PANEL RAM 9GB", "price": 9000, "desc": "Panel premium dengan power tinggi.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+    { "id": 10, "name": "PANEL RAM UNLIMITED", "price": 10000, "desc": "RAM tanpa batas untuk kebutuhan berat.", "img": "https://files.catbox.moe/ihnpq0.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "panel" },
+
+    { "id": 11, "name": "NOKOS +62", "price": 7000, "desc": "+62 Indonesia, stabil OTP.", "img": "https://files.catbox.moe/jobad4.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "nokos" },
+    { "id": 12, "name": "NOKOS +970", "price": 17000, "desc": "+970 kualitas tinggi.", "img": "https://files.catbox.moe/jobad4.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "nokos" },
+    { "id": 13, "name": "NOKOS +7", "price": 50000, "desc": "+7 Rusia premium.", "img": "https://files.catbox.moe/jobad4.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "nokos" },
+    { "id": 14, "name": "NOKOS +60", "price": 15000, "desc": "Malaysia stabil untuk WA & Telegram.", "img": "https://files.catbox.moe/jobad4.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "nokos" },
+    { "id": 15, "name": "NOKOS +998", "price": 35000, "desc": "Uzbekistan kualitas tinggi.", "img": "https://files.catbox.moe/jobad4.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "nokos" },
+    { "id": 16, "name": "NOKOS +90", "price": 35000, "desc": "Turki cocok untuk bot.", "img": "https://files.catbox.moe/jobad4.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "nokos" },
+    { "id": 17, "name": "NOKOS +1", "price": 40000, "desc": "Nomor premium US.", "img": "https://files.catbox.moe/jobad4.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "nokos" },
+
+    { "id": 18, "name": "RENAME BOT WA", "price": 9000, "desc": "Jasa rename bot WA cepat.", "img": "https://files.catbox.moe/y4ykfq.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "script" },
+    { "id": 19, "name": "SCRIPT LYRRA-MD V6 (FREE UP)", "price": 35000, "desc": "Script premium + update gratis.", "img": "https://files.catbox.moe/y4ykfq.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "script" },
+    { "id": 20, "name": "SCRIPT LYRRA-MD V6 (NO UP)", "price": 25000, "desc": "Versi stabil tanpa update.", "img": "https://files.catbox.moe/y4ykfq.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "script" },
+    { "id": 21, "name": "SCRIPT ALICE ASSISTENT (FREE UP)", "price": 50000, "desc": "Alice Assistant lengkap.", "img": "https://files.catbox.moe/y4ykfq.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "script" },
+    { "id": 22, "name": "SCRIPT ALICE ASSISTENT (NO UP)", "price": 40000, "desc": "Versi tanpa update.", "img": "https://files.catbox.moe/y4ykfq.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "script" },
+    { "id": 23, "name": "SCRIPT SELFBOT (FREE UP)", "price": 25000, "desc": "Selfbot premium free update.", "img": "https://files.catbox.moe/y4ykfq.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "script" },
+    { "id": 24, "name": "SCRIPT SELFBOT (NO UP)", "price": 15000, "desc": "Selfbot hemat.", "img": "https://files.catbox.moe/y4ykfq.jpg", "qris": "https://files.catbox.moe/iunitp.jpg", "cat": "script" }
+  ]
+}

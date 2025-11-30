@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Admin Panel</h2>
+  <p class="subtitle">Silakan login untuk melanjutkan</p>
+
+  <form id="loginForm">
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" id="user" required placeholder="Masukkan username">
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" id="pass" required placeholder="Masukkan password">
+    </div>
+
+    <button type="submit" class="login-btn">MASUK</button>
+  </form>
+
+  <p id="status" class="status"></p>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

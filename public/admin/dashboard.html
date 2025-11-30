@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Awang Official</title>
+  <link rel="stylesheet" href="admin.css">
+
+  <style>
+    /* === DROPZONE STYLE MODERN === */
+    .dropzone {
+        width: 100%;
+        padding: 26px;
+        border: 2px dashed rgba(255, 255, 255, 0.3);
+        border-radius: 14px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.25s ease;
+        color: #ddd;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(6px);
+        margin-bottom: 10px;
+    }
+
+    .dropzone:hover {
+        border-color: #6ac1ff;
+        color: #fff;
+        background: rgba(255,255,255,0.08);
+    }
+
+    .dropzone.dragover {
+        border-color: #00a2ff;
+        background: rgba(0, 162, 255, 0.12);
+    }
+
+    .dropzone input {
+        display: none;
+    }
+
+    .file-name {
+        margin-top: 6px;
+        font-size: 13px;
+        color: #9ecbff;
+        text-align: center;
+    }
+   
+    html {
+        scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="admin-header">
+    <div class="brand">
+      <h1>AWANG ADMIN</h1>
+      <p>Kelola produk — Panel / Nokos / Script</p>
+    </div>
+    <div class="actions">
+      <button id="refreshBtn" class="ghost">Refresh</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+
+    <!-- ===========================
+         FORM TAMBAH PRODUK
+    ============================= -->
+    <section class="panel add-panel">
+      <h2>Tambah Produk Baru</h2>
+
+      <div class="form-grid">
+
+        <input id="newName" placeholder="Nama produk" />
+        <input id="newCat" placeholder="Kategori (panel / nokos / script)" />
+        <input id="newPrice" placeholder="Harga (angka)" />
+        <input id="newImg" placeholder="URL gambar (opsional)" />
+        <input id="newQris" placeholder="QRIS URL (opsional)" />
+        <textarea id="newDesc" placeholder="Deskripsi produk"></textarea>
+
+        <!-- 🔥 DROPZONE BARU -->
+        <div class="dropzone" id="dropzone">
+            <p>Drag & Drop gambar di sini atau klik untuk memilih file</p>
+            <input type="file" id="newFile" accept="image/*">
+        </div>
+        <div id="fileName" class="file-name"></div>
+
+        <div class="form-actions">
+          <button id="addBtn" class="primary">Tambah Produk</button>
+          <button id="clearBtn" class="ghost">Bersihkan</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         LIST PRODUK
+    ============================= -->
+    <section class="panel list-panel">
+      <h2>Daftar Produk</h2>
+      <div id="productGrid" class="grid"></div>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast" style="display:none;"></div>
+
+  <script src="admin.js"></script>
+
+  <!-- ===========================
+       PROTECT PAGE
+  ============================= -->
+  <script>
+  function protectPage() {
+      fetch("/admin/check", {
+          method: "GET",
+          credentials: "include"
+      })
+      .then(res => res.json())
+      .then(data => {
+          if (!data.auth) {
+              window.location.href = "/admin/login";
+          }
+      })
+      .catch(() => {
+          window.location.href = "/admin/login";
+      });
+  }
+
+  protectPage();
+  </script>
+
+  <!-- ===========================
+       DROPZONE SCRIPT
+  ============================= -->
+  <script>
+    const dropzone = document.getElementById("dropzone");
+    const fileInput = document.getElementById("newFile");
+    const fileNameBox = document.getElementById("fileName");
+
+    // Klik → pilih file
+    dropzone.addEventListener("click", () => fileInput.click());
+
+    // Input manual
+    fileInput.addEventListener("change", () => {
+        handleFile(fileInput.files[0]);
+    });
+
+    // Drag over
+    dropzone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropzone.classList.add("dragover");
+    });
+
+    // Drag leave
+    dropzone.addEventListener("dragleave", () => {
+        dropzone.classList.remove("dragover");
+    });
+
+    // Drop file
+    dropzone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropzone.classList.remove("dragover");
+
+        const file = e.dataTransfer.files[0];
+        fileInput.files = e.dataTransfer.files;
+
+        handleFile(file);
+    });
+
+    function handleFile(file) {
+        if (!file) return;
+        fileNameBox.textContent = `File dipilih: ${file.name}`;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+:root{
+  --gradient: linear-gradient(135deg,#3d4bff,#8c5eff,#00b3ff,#0099ff);
+  --bg: #0e1121;
+  --card: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.08);
+  --muted: #b8c0d9;
+  --accent: #5c7bff;
+  --radius:14px;
+  --glass: rgba(255,255,255,0.04);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:radial-gradient(circle at top,#232946 0%, #0e1121 70%);color:#eaf0ff}
+a{color:inherit;text-decoration:none}
+
+.admin-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 28px;
+  background:rgba(20,22,35,0.5);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+
+.brand h1{
+  margin:0;font-size:18px;background:var(--gradient);-webkit-background-clip:text;color:transparent;font-weight:800;
+}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+
+.admin-main{
+  max-width:1200px;
+  margin:28px auto;
+  padding:0 20px 60px;
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap:20px;
+}
+
+/* panels */
+.panel{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+
+/* add form */
+.add-panel h2, .list-panel h2{margin:0 0 12px;font-size:16px}
+.form-grid{display:grid;gap:10px;grid-template-columns:1fr}
+.form-grid input, .form-grid textarea{
+  padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);
+  background:rgba(255,255,255,0.02); color:#eaf0ff; outline:none;
+}
+.form-grid textarea{min-height:84px;resize:vertical}
+.file-upload .file-label{
+  display:inline-block;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,0.02);cursor:pointer;border:1px dashed rgba(255,255,255,0.04);color:var(--muted);
+}
+.file-upload input[type=file]{display:block;margin-top:8px}
+
+/* buttons */
+button{cursor:pointer;border:0;padding:10px 14px;border-radius:12px;font-weight:700}
+.primary{background:var(--gradient);color:white;box-shadow:0 8px 24px rgba(75,90,255,0.18)}
+.ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
+.danger{background:#ff4d5a;color:white}
+
+/* product grid */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap:14px;
+}
+
+.card-admin{
+  background:var(--card);
+  padding:12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card-admin:hover{ transform:translateY(-6px); box-shadow:0 14px 40px rgba(0,0,0,0.45) }
+
+.card-thumb{
+  height:120px;border-radius:10px;overflow:hidden;background:#0b0b0b;display:flex;align-items:center;justify-content:center;
+}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* inputs in card */
+.card-input{width:100%;padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:#eaf0ff;font-size:13px}
+.card-row{display:flex;gap:8px}
+.card-row .card-input{flex:1}
+
+/* small caption */
+.small{font-size:12px;color:var(--muted);margin:0}
+
+/* actions */
+.card-actions{display:flex;gap:8px;margin-top:6px}
+.card-actions button{flex:1;padding:8px;font-size:13px}
+
+/* toast */
+.toast{
+  position:fixed;right:18px;bottom:18px;background:rgba(15,18,40,0.9);padding:10px 14px;border-radius:10px;color:white;border:1px solid rgba(255,255,255,0.05);
+}
+
+/* responsive */
+@media (max-width:980px){
+  .admin-main{grid-template-columns:1fr; padding:20px}
+}
+
+.dropzone {
+    width: 100%;
+    padding: 30px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #ddd;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(6px);
+}
+
+.dropzone:hover {
+    border-color: #6ac1ff;
+    color: #fff;
+    background: rgba(255,255,255,0.08);
+}
+
+.dropzone.dragover {
+    border-color: #00a2ff;
+    background: rgba(0, 162, 255, 0.12);
+}
+
+.dropzone p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.dropzone input {
+    display: none;
+}
+
+.file-name {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #9ecbff;
+}
